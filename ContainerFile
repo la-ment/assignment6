@@ -1,0 +1,22 @@
+#source for reference on Fedora Code: https://docs.fedoraproject.org/en-US/neurofedora/containers/
+
+sudo dnf install podman
+
+sudo dnf install toolbox
+
+#podman pull registry.fedoraproject.org/compneuro
+#podman run -it compneuro:latest /bin/bash
+# terminal in the container for [root@usr_domain /]#
+
+podman pull fedora:latest
+podman run -it fedora:latest /bin/bash
+sudo dnf install python3-nest
+
+[root@usr_domain/]# ipython
+Python 3.9.0 (default, Oct  6 2020, 00:00:00)
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.
+
+ import nest
+
+#ContainerFile now begins
