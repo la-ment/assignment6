@@ -1,0 +1,25 @@
+name: Build and Push Container
+on: compneuro
+  push:Fedora
+    branches:
+      - main
+
+jobs: testproject_python
+  build: NEST
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Login to Docker registry
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push container
+        run: |
+          docker build -t my-container .
+          docker tag my-container <Mytest_python>/<image_nestpy>:<version1>
+          docker push <Mytest_python>/<image_nestpy>:<version1>
