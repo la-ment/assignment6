@@ -20,7 +20,7 @@ jobs:
 
       - name: Build and push container
         run: |
-          cd git clone https://github.com/la-ment/assignment6
+          git clone https://github.com/la-ment/assignment6
           cd assignment6
           docker build -t my-container .
           docker tag my-container coolapp/v.1:ubuntu
