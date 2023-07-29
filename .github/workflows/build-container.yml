@@ -21,6 +21,5 @@ jobs:
       - name: Build and push container
         run: |
           docker build -t my-container .
-          docker tag my-container registry_coolapp/storage_exercise:ubuntu_tag
-          docker push registry_coolapp/storage_exercise:ubuntu_tag
-          
+          docker tag my-container coolapp/store_action:v.1.0
+          docker push coolapp/store_action:v.1.0
