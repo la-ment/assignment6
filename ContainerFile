@@ -1,9 +1,6 @@
 FROM ubuntu:latest
 COPY data.txt ./
-
-FROM fedora 
 WORKDIR /coolapp
-COPY  ./data.txt ./app
 EXPOSE 80/tcp
 
 #ContainerFile now begins
