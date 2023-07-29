@@ -23,7 +23,6 @@ jobs:
           cd
           git clone https://github.com/la-ment/assignment6
           cd assignment6
-          cd docker
           docker build -t my-container .
           docker tag my-container coolapp/store_action:v.1.0
           docker push coolapp/store_action:v.1.0
