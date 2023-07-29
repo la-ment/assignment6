@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 COPY data.txt ./
 WORKDIR /coolapp
-EXPOSE 80/80 tcp
+EXPOSE 80/tcp
 
 #ContainerFile now begins
