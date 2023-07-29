@@ -2,7 +2,7 @@ FROM ubuntu:latest
 COPY data.txt ./
 
 FROM fedora 
-WORKDIR /app
+WORKDIR /coolapp
 COPY  ./data.txt ./app
 EXPOSE 80/tcp
 
